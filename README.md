@@ -1,4 +1,6 @@
-# CS3560-Object-Oriented-Design-and-Programming-Fall-2022-Group-1
+# CS3560-Object-Oriented-Design-and-Programming-Fall-2022-Group-1  
+
+
 The topic of the presentation is design pattern. In our course, we have covered several patterns
 in the GoF book. Your job is to present a new pattern from the book. I will randomly assign a
 pattern to every team. (https://en.wikipedia.org/wiki/Software_design_pattern)
