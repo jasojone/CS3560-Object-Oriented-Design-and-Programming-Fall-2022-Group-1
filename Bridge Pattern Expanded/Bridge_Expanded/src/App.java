@@ -1,8 +1,34 @@
 // Source: https://www.geeksforgeeks.org/bridge-design-pattern/
-// Java code to demonstrate
-// bridge design pattern
+// Expanded Java code to demonstrate bridge design pattern with a new abstract class
 
-// abstraction in bridge pattern
+abstract class Structure {
+    protected Workshop workShop1;
+    protected Workshop workShop2;
+
+    protected Structure(Workshop workShop1, Workshop workShop2)
+    {
+        this.workShop1 = workShop1;
+        this.workShop2 = workShop2;
+    }
+
+    abstract public void manufacture();
+}
+
+class Shed extends Structure {
+    public Shed(Workshop workShop1, Workshop workShop2)
+    {
+        super(workShop1, workShop2);
+    }
+
+    @Override
+    public void manufacture()
+    {
+        System.out.print("Shed ");
+        workShop1.work();
+        workShop2.work();
+    }
+}
+
 abstract class Vehicle {
 	protected Workshop workShop1;
 	protected Workshop workShop2;
@@ -81,5 +107,7 @@ class BridgePattern {
 		vehicle1.manufacture();
 		Vehicle vehicle2 = new Bike(new Produce(), new Assemble());
 		vehicle2.manufacture();
+        Structure structure1 = new Shed(new Produce(), new Assemble());
+        structure1.manufacture();
 	}
 }
