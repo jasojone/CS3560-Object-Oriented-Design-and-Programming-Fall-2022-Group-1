@@ -1,16 +1,11 @@
 // Vehicle class is an abstract class for all vehicles.
 
 abstract class Vehicle {
-    abstract public void manufacture();
 }
 
 // Car class is a class that extends Vehicle class.
 
 class Car extends Vehicle {
-    @Override
-    public void manufacture() {
-        System.out.println("Car");
-    }
 
     // assemble method is a method that assembles the car.
     public void assembleCar() {
@@ -26,10 +21,6 @@ class Car extends Vehicle {
 
 // Bike class is a class that extends Vehicle class.
 class Bike extends Vehicle {
-    @Override
-    public void manufacture() {
-        System.out.println("Bike");
-    }
 
     // assemble method is a method that assembles the bike.
     public void assembleBike() {
@@ -46,10 +37,6 @@ class Bike extends Vehicle {
 
 // Boat class
 class Boat extends Vehicle {
-    @Override
-    public void manufacture() {
-        System.out.println("Bike");
-    }
 
     public void assembleBoat() {
         System.out.println("Assemble Boat");
@@ -65,12 +52,10 @@ class Boat extends Vehicle {
 public class App {
     public static void main(String[] args) {
         Vehicle vehicle1 = new Car();
-        vehicle1.manufacture();
         Car car = new Car();
         car.produceCar();
         car.assembleCar();
         Vehicle vehicle2 = new Bike();
-        vehicle2.manufacture();
         Bike bike = new Bike();
         bike.produceBike();
     }
