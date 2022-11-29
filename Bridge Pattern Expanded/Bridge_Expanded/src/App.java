@@ -1,23 +1,13 @@
 // Source: https://www.geeksforgeeks.org/bridge-design-pattern/
 // Expanded Java code to demonstrate bridge design pattern with a new abstract class
 
-abstract class Structure {
-    protected Workshop workShop1;
-    protected Workshop workShop2;
-
-    protected Structure(Workshop workShop1, Workshop workShop2)
-    {
-        this.workShop1 = workShop1;
-        this.workShop2 = workShop2;
-    }
-
-    abstract public void manufacture();
-}
-
-class Shed extends Structure {
+class Shed {
+    protected Workshop workshop1;
+    protected Workshop workshop2;
     public Shed(Workshop workShop1, Workshop workShop2)
     {
-        super(workShop1, workShop2);
+        this.workShop1 = workShop1;
+	this.workShop2 = workShop2;
     }
 
     @Override
