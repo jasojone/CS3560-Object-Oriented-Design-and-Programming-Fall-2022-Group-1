@@ -11,13 +11,15 @@ class Car extends Vehicle {
     public void manufacture() {
         System.out.println("Car");
     }
+
     // assemble method is a method that assembles the car.
-    public void assemble() {
-        System.out.println("Assembled");
+    public void assembleCar() {
+        System.out.println("Assemble Car");
     }
+
     // produce method is a method that produces the car.
-    public void produce() {
-        System.out.println("Produced");
+    public void produceCar() {
+        System.out.println("Produce Car");
     }
 
 }
@@ -28,14 +30,35 @@ class Bike extends Vehicle {
     public void manufacture() {
         System.out.println("Bike");
     }
+
     // assemble method is a method that assembles the bike.
-    public void assemble() {
-        System.out.println("Assembled");
+    public void assembleBike() {
+        System.out.println("Assemble Bike");
     }
+
     // produce method is a method that produces the bike.
-    public void produce() {
-        System.out.println("Produced");
+    public void produceBike() {
+        System.out.println("Produce Bike");
     }
+}
+
+// if Boat was added
+
+// Boat class
+class Boat extends Vehicle {
+    @Override
+    public void manufacture() {
+        System.out.println("Bike");
+    }
+
+    public void assembleBoat() {
+        System.out.println("Assemble Boat");
+    }
+
+    public void produceBoat() {
+        System.out.println("Produce Boat");
+    }
+
 }
 
 // App class is a class that contains main method.
@@ -44,12 +67,11 @@ public class App {
         Vehicle vehicle1 = new Car();
         vehicle1.manufacture();
         Car car = new Car();
-        car.produce();
-        car.assemble();
+        car.produceCar();
+        car.assembleCar();
         Vehicle vehicle2 = new Bike();
         vehicle2.manufacture();
         Bike bike = new Bike();
-        bike.produce();
+        bike.produceBike();
     }
 }
-    
